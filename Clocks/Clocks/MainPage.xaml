@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clocks.MainPage">
+
+    <FlexLayout Direction="Column" AlignItems="Start" JustifyContent="SpaceEvenly" Margin="20">
+
+
+        <Label BackgroundColor="White"  x:Name="hours" HeightRequest="100" Margin="15,20,15,2"  />
+        <Label BackgroundColor="White"  x:Name="minutes" HeightRequest="100" Margin="15,2"  />
+        <Label BackgroundColor="White"  x:Name="secon" HeightRequest="100" Margin="15,2,15,20"  />
+        
+      
+        
+    </FlexLayout>
+
+</ContentPage>
