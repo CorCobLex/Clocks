@@ -18,12 +18,9 @@ namespace Clocks
         public MainPage()
         {
             InitializeComponent();
-            //var timeNow = DateTime.Now;
-            //secon.WidthRequest = timeNow.Second * 6;
-            //minutes.WidthRequest = timeNow.Minute * 6;
-            //hours.WidthRequest = timeNow.Hour * 12;
+            
             InitTimer();
-            BindingContext = true;
+            BindingContext = this;
 
         }
 
@@ -69,9 +66,9 @@ namespace Clocks
         {
             var timeNow = DateTime.Now;
 
-            _hours = timeNow.Hour;
-            _minutes = timeNow.Minute;
-            _seconds = timeNow.Second;
+            Hours = timeNow.Hour*12;
+            Minutes = timeNow.Minute*6;
+            Seconds = timeNow.Second*6;
    
             
 
