@@ -11,6 +11,10 @@ namespace Clocks
 {
     public partial class MainPage : ContentPage
     {
+        private int _seconds;
+        private int _minutes;
+        private int _hours;
+
         public MainPage()
         {
             InitializeComponent();
@@ -19,7 +23,38 @@ namespace Clocks
             //minutes.WidthRequest = timeNow.Minute * 6;
             //hours.WidthRequest = timeNow.Hour * 12;
             InitTimer();
+            BindingContext = true;
 
+        }
+
+        public int Seconds
+        {
+            get => _seconds;
+            set
+            {
+                _seconds = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int Minutes
+        {
+            get => _minutes;
+            set
+            {
+                _minutes = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int Hours
+        {
+            get => _hours;
+            set
+            {
+                _hours = value;
+                OnPropertyChanged();
+            }
         }
 
         private void InitTimer()
@@ -34,10 +69,11 @@ namespace Clocks
         {
             var timeNow = DateTime.Now;
 
+            _hours = timeNow.Hour;
+            _minutes = timeNow.Minute;
+            _seconds = timeNow.Second;
    
-            secon.WidthRequest = timeNow.Second * 6;
-            minutes.WidthRequest = timeNow.Minute * 6;
-            hours.WidthRequest = timeNow.Hour * 12;
+            
 
 
 

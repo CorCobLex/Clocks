@@ -6,9 +6,9 @@
     <FlexLayout Direction="Column" AlignItems="Start" JustifyContent="SpaceEvenly" Margin="20">
 
 
-        <Label BackgroundColor="White"  x:Name="hours" HeightRequest="100" Margin="15,20,15,2"  />
-        <Label BackgroundColor="White"  x:Name="minutes" HeightRequest="100" Margin="15,2"  />
-        <Label BackgroundColor="White"  x:Name="secon" HeightRequest="100" Margin="15,2,15,20"  />
+        <BoxView BackgroundColor="White"  WidthRequest="{Binding Hours}" HeightRequest="100" Margin="15,20,15,2"  />
+        <BoxView BackgroundColor="White"  WidthRequest="{Binding Minutes}" HeightRequest="100" Margin="15,2"  />
+        <BoxView BackgroundColor="White"  WidthRequest="{Binding Seconds}" HeightRequest="100" Margin="15,2,15,20"  />
         
       
         
